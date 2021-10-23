@@ -1,6 +1,6 @@
 import { NgModule, Component } from '@angular/core';
 
-//routerModule dice si son rutas principales o fijas a angular
+//RouterModule dice si son rutas principales o fijas a angular
 import {Routes,RouterModule} from '@angular/router';
 import { PortafolioComponent } from './pages/portafolio/portafolio.component';
 import { AboutComponent } from './pages/about/about.component';
@@ -24,6 +24,9 @@ const app_routes: Routes = [
 @NgModule({
     imports: [
         RouterModule.forRoot( app_routes)
+    ],//se exporta el RouterModule para que tome de app.module  <router-outlet></router-outlet> y pueda cambiar de pagina
+    exports:[
+        RouterModule
     ]
 
 })
