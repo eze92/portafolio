@@ -11,13 +11,13 @@ import { ItemComponent } from './pages/item/item.component';
 //arreglo de rutas a donde va redirigir
 const app_routes: Routes = [
     //ruta vacia
-    {path: '',component: PortafolioComponent },
+    {path: 'home',component: PortafolioComponent },
     {path:'about',component:AboutComponent},
     {path: 'item',component:ItemComponent},
     //ruta que no este aca / exepcion 
     //y redireccion a portafolio 1ra ruta
     //pathMatch para que sea cualquier ruta
-    {path: '**', pathMatch: 'full',redirectTo: ''}
+    {path: '**', pathMatch: 'full',redirectTo: 'home'}
 
 ];
 //importo un arreglo de rutas , el que tengo arriba
