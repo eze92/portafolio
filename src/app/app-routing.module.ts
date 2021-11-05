@@ -23,7 +23,7 @@ const app_routes: Routes = [
 //importo un arreglo de rutas , el que tengo arriba
 @NgModule({
     imports: [
-        RouterModule.forRoot( app_routes)
+        RouterModule.forRoot( app_routes, {useHash: true})
     ],//se exporta el RouterModule para que tome de app.module  <router-outlet></router-outlet> y pueda cambiar de pagina
     exports:[
         RouterModule
