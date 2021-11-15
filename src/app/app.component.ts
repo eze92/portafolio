@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { InfopaginaService } from './services/infopagina.service';
+import { InfoPaginaService } from './services/infoPagina.service';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +11,7 @@ export class AppComponent {
 
   //realizo inyeccion de dependencia del servicio
 
-  constructor( public _infoPaginaService:InfopaginaService ) {
+  constructor( public _infoPaginaService:InfoPaginaService ) {
 
     //Leer archivo json
   }

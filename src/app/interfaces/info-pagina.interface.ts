@@ -1,9 +1,11 @@
-export interface Infopagina{
+export interface InfoPagina{
   titulo?: string;
   email?: string;
   nombre_corto?: string;
   pagina_autor?: string;
   facebook?: string;
+  twitter?: string ;
   equipo_trabajo?: any[];
+  
 }
 // signo de interrogacion significa que el dato puede no venir
