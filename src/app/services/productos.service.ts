@@ -7,10 +7,11 @@ import { ProductoInterface } from '../interfaces/producto.interface';
 })
 export class ProductosService {
 
+  productos: ProductoInterface = {};
   cargando = true ;
   //cada uno de los productos el del tipo
   //de la intarface
-  productos: ProductoInterface[] = [];
+ 
 
   //inyecto la dependencia htpp para conectar 
   //a la base
@@ -26,7 +27,7 @@ export class ProductosService {
       .subscribe((resp: ProductoInterface) => {
 
         console.log(resp);
-
+        this.productos = resp;
         this.cargando = false;
 
       });
