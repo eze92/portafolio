@@ -22,6 +22,7 @@ export class InfoPaginaService {
       //ruta del json
     this.htpp.get('assets/data/data-pagina.json')
     //suscribe recibe una respuesta 
+    //InfoPagina es la interface donde va tomar los datos
     .subscribe((resp: InfoPagina) =>{
     
       this.cargada = true;
