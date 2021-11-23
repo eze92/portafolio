@@ -8,6 +8,9 @@ import { ProductoInterface } from '../interfaces/producto.interface';
 export class ProductosService {
 
   cargando = true ;
+  //cada uno de los productos el del tipo
+  //de la intarface
+  productos: ProductoInterface[] = [];
 
   //inyecto la dependencia htpp para conectar 
   //a la base
