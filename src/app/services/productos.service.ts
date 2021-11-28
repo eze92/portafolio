@@ -8,6 +8,7 @@ import { Producto } from '../interfaces/producto.interface';
 export class ProductosService {
 
   //productos: Producto = {};
+  info: Producto = {};
   productos: any[] = [];
   cargando = true ;
   //cada uno de los productos el del tipo
@@ -30,6 +31,12 @@ export class ProductosService {
         console.log(resp);
         this.productos = resp;
         this.cargando = false;
+       
+        /*/ timeout para probar el loading
+        setTimeout(() => {
+          this.cargando = false;
+        },2000);
+        */
 
       });
    }
