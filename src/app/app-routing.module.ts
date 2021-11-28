@@ -13,7 +13,7 @@ const app_routes: Routes = [
     //ruta vacia
     {path: 'home',component: PortafolioComponent },
     {path:'about',component:AboutComponent},
-    {path: 'item',component:ItemComponent},
+    {path: 'item/:id',component:ItemComponent},
     //ruta que no este aca / exepcion 
     //y redireccion a portafolio 1ra ruta
     //pathMatch para que sea cualquier ruta
