@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { ProductoInterface } from '../interfaces/producto.interface';
+import { Producto } from '../interfaces/producto.interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductosService {
 
-  productos: ProductoInterface = {};
+  //productos: Producto = {};
+  productos: any[] = [];
   cargando = true ;
   //cada uno de los productos el del tipo
   //de la intarface
@@ -24,7 +25,7 @@ export class ProductosService {
 
     this.http.get('https://angular-html-8b8c1-default-rtdb.firebaseio.com/productos_idx.json')
       //hace la peticion htpp 
-      .subscribe((resp: ProductoInterface) => {
+      .subscribe((resp: any) => {
 
         console.log(resp);
         this.productos = resp;
