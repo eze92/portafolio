@@ -73,6 +73,7 @@ export class ProductosService {
     //purgo el arreglo para que no aparezca dos veces la imagen
     this.productosFiltrado = [];
 
+    //para eliminar el case sentitive
     termino = termino.toLocaleLowerCase();
 
 
