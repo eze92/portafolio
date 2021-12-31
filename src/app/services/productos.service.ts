@@ -11,6 +11,7 @@ export class ProductosService {
   info: Producto = {};
   productos: any[] = [];
   cargando = true ;
+  productosFiltrado : Producto[] = [];
   //cada uno de los productos el del tipo
   //de la intarface
  
@@ -43,6 +44,12 @@ export class ProductosService {
    getProducto( id: string){
       
     return this.http.get(`https://angular-html-8b8c1-default-rtdb.firebaseio.com/productos/${ id }.json`);
+   }
+
+   buscarProducto (termino : string){
+      this.productosFiltrado = this.productos.filter(producto => {
+        return true;
+      });
    }
    
 }
